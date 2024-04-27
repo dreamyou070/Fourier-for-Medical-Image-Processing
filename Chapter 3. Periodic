@@ -1,0 +1,12 @@
+1. fundamental frequency
+ - period = T
+ - frequency = 1/T
+
+2. fourier series
+
+3. fourier coefficient
+ - fourier 을 exponential 로 표현하고 그 계수가 fourier coefficient 이다.
+ - coefficient 를 구하기 위해서 exponential 을 양변에 내적함으로써 구할 수 있다.
+
+4. dirichlet condition
+ - 불연속점에서의 함수값을 구하는 방법으로, 그 평균으로 구할 수 있다.
