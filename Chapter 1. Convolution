@@ -1,0 +1,8 @@
+LTI system and Convolution
+
+1. Convolution 은 LTI system 이다.
+ - scaling
+ - Time Invariant
+ - additivity
+
+2. Impulse Response, h(x)
