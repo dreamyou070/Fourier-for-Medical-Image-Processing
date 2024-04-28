@@ -1,0 +1,14 @@
+1. fourier transform
+- 푸리에 transform 은 fourier series 의 확장 버전이다.
+
+2. 비주기 함수란
+- 비주기 함수는, 주기 함수에서 주기를 무한대로 보낸 것으로 볼 수 있다.
+- time domain 에서의 주기 함수를 frequency domain 에서 바라볼 수 있는데, 주기가 늘어날 수록 frequency domain 에서 거의 연속처럼 보인 다는 것을 알 수 있다.
+- 이 주기가 무한히 커지면 비주기 함수가 되고, 이는 frequency domain 에서 연속 함수가 되게 된다.
+- ak 는 fourier coefficient 인데, 주기가 커질 수록 그 값이 작아짐을 알 수 있다.
+- ak? 함수를 주기 함수들의 합으로 나타낼 때, k번째 주기 함수의 계수를 ak 라고 한다.
+- ak * T0 은, 0 으로 수렴하지 않고, 주기가 늘어나도 동일한 값을 유지함을 알 수 있다.
+
+3. fourier transform and inverse fourier transform
+- fourier coefficient 인 ak 를 적분으로 나타낼 수 있다.
+- T0 을 넘김으로써, ak * T0 을 나타낼 수 있다.
