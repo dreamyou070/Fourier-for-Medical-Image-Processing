@@ -1,0 +1,42 @@
+3~5장까지 LPF, HPF, Homomorphic Filter 을 살펴보았다.
+이 외의 Fourier Transform 의 다른 특징들을 학습해 보고자 한다.
+
+6.1 Translation
+time domain 에서 지수승을 곱하는 것은 frequency domain 에서 shifting 을 하는 것과 같은 효과를 낸다. (modulation)
+이런 특징을 이용해서 centering 을 할 수 있다.
+
+6.2 Linear Operation
+
+6.3 Scaling
+
+6.4 Rotation
+polar coordinate 로 바꾸어서 쓰게 되면 rotation 을 표현할 수 있게 된다.
+
+6.5 주기성
+이산 푸리에 변환은 주기성을 보이기 때문에 이를 주기를 이용해서 표현할 수 있다.
+또한 이산 푸리에 변환의 역변환 역시 주기적 성질을 보이게 된다.
+
+6.6 Conjugate (대칭성)
+real 함수는 conjugate symmetry 의 성질 (즉 크기는 같지만 위상은 반대가 된다)을 보이게 된다.
+
+6.7 separability
+이산 푸리에 변환은 separability 의 특징을 가지고 있어서, row 축과 column 축으로 나누어서 변환시킬 수 있다.
+
+6.8 fourier pair
+푸리에변환과 역푸리에변환은 서로 pair 를 이루게 된다.
+
+6.9 convolution
+time domain 에서의 convolution 은 주파수 domain 에서 곱으로 표현될 수 있다.
+이를 주파수 domain 에서 filtering 을 하기 위해서는 padding 을 해주어야 한다.
+
+6.10 correlation
+
+6.11 고속 푸리에 변환
+고속 푸리에 변환은 말 그대로 빠르게 하는 변환을 의미한다.
+어떻게 해서 기존 합성곱에 비해서 빠르게 할 수 있는지를 알아보자.
+푸리에 변환이 있다고 했을 때, 이를 even (짝수부) 와 odd (홀수부) 로 나누어서 계산할 수 있다.
+이를 주기성과 같이 결합해서 표현을 할 수 있다.
+이산 푸리에변환에서의 point 가 총 N 개라고 했을 때 각각 N/2 를 이용해서 총 연산량을 계산하면, (N^2/2 + N/2) 가 된다.
+
+6.12 기수2 알고리즘 (Radix-2 FFT Algorithm)
+
