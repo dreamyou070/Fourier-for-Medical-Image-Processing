@@ -1,0 +1,24 @@
+우리가 사물을 볼때는 조도와 반사의 곱으로 보게 된다. 즉,
+f(x,y) = I(x,y)R(x,y)
+이다.
+일반적으로 '조도' 는 저주파 성분으로 돼있고, '반사' 는 고주파 성분으로 돼있다.
+즉, '조도' 는 spatial domain 에서의 변화가 느리고, '반사'는 abstract 하고 빠른 변화가 있다.
+이런 서로 다른 성질은 time domain 에서는 분리하기가 어렵지만 이를 주파수 domain 에서 바라보게 된다면 서로 다른 주파수 특징에 의해서 주파수 분석과 filtering 을 통해서 분리할 수 있게 된다.
+이를 수식적으로 쓰게 되면,
+
+f(x,y) = I(x,y)R(x,y) 이므로, 
+ln(f) = ln(I) + ln(R) 이다.
+그러므로 이를 frequency domain 에서 보게 되면,
+F(ln(f)) = F(ln(I)) + F(ln(R)) 이다.
+Z = F_i + F_r
+여기에 filter 을 씌우게 되면
+H*Z = H*F_i + H*F_r = S
+이 된다.
+이를 다시 inverse fourier transform 을 해서 time domain 으로 변경하면 원본 이미지 대비 개선된 이미지를 얻을 수 있게 된다.
+
+이러한 시스템을 "Homomorphic(준동) Filtering" 이라고 한다.
+
+5.1 Homomorphic Filtering
+위에서 사용된 필터를 Homomorphic Filter (준동형 필터 함수) 라고 한다.
+위에서 설명한 바와 같이 준동형 필터는 저주파와 고주파에서 서로 다르게 제어를 하는데 이를 위해
+저주파에서의 제어를 R_L, 고주파에서의 제어를 R_H 라고 하며, 이 사이의 값만 filtering 해서 취하게 된다.
