@@ -9,4 +9,19 @@ high pass filtering 에서는 빠질 수 없는 필터로 Laplacian Filter 가 �
 라플라시안 방정식은 2차 편미분 방정식을 의미한다.
 time domain 에서는 편미분으로 끝이 나지만 편미분한 함수를 주파수 domain 에서 바라보게 된다면 power 와 원함수로 표현되게 된다.
 
-## high pass filtering 을 하게 되면 DC component 가 사라지기 때문에 이미지가 어두워지게 된다. ##
+""" high pass filtering 을 하게 되면 DC component 가 사라지기 때문에 이미지가 어두워지게 된다. """
+이런 문제가 있어서 이를 해결하기 위해 원래 이미지를 일부 더해주는 기술이 있는데, 이 기술이 High Boost Filtering 이다.
+
+4.2 High Boost Filtering
+일반적인 high filtering 은
+output = f(x,y) - f_low(x,y) 을 하는 것이다.
+그런데 이미지의 일부를 더해주게 되면,
+output = A * f(x,y) - f_low(x,y) 
+가 되게 된다.
+이를 다시 쓰게 되면,
+output = (A-1) * f(x,y) + f(x,y) - f_low(x,y) = (A-1) * f(x,y) + f_high(x,y)
+가 된다.
+이런 high boost filtering 에는 문제가 없을까?
+
+high boost filter 역시 rining 와 같은 artifect 가 생기는 문제가 있다.
+이를 해결하기 위해 개발된 기술이 Homomorphic Filtering 이다.
