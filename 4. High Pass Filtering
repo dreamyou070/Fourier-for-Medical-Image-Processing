@@ -1,0 +1,12 @@
+3장에서는 저주파만 통과시키는 low pass filtering 에 대해 학습하였다.
+4장에서는 이와 반대인 고주파 pass filter 을 학습해 보고자 한다.
+
+4.0 High Pass Filtering
+기본적으로 high pass filter 은 1 - LPF 으로, LPF 와 같이 idea / butterworth / Gaussian 의 3종류가 존재하게 된다.
+high pass filtering 에서는 빠질 수 없는 필터로 Laplacian Filter 가 있다.
+
+4.1 Laplacian 
+라플라시안 방정식은 2차 편미분 방정식을 의미한다.
+time domain 에서는 편미분으로 끝이 나지만 편미분한 함수를 주파수 domain 에서 바라보게 된다면 power 와 원함수로 표현되게 된다.
+
+## high pass filtering 을 하게 되면 DC component 가 사라지기 때문에 이미지가 어두워지게 된다. ##
