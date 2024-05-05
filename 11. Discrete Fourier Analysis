@@ -3,11 +3,35 @@
 
 1. Discrete Fourier Trnaosfmr (DFT)
 우선 DFT 와 CFT 의 관계를 아는 것으로 시작해 보자.
-만약 g(x) 가 time limited 라고 해보자.
-그러면 g(x) 는 continuous 함수와 rec 함수의 곱으로 표현이 되고, 이는 
-G(s) 가 continuous 와 sinc 함수의 convolution 으로 표현됨을 의미한다.
-2) 
-만약 F(s) 가 band limited 라고 하자.
-f(x) 를 2B 주기로 sampling 을 하게 된다면, f^(x) 는 sampled f(x) 가 되게 되고, 여기서의 sampling 이 된 횟수는 4LB 가 된다.
-f(x) 가 2B 주기로 sampled 이므로,
-F(s) 도 2B 로 sample 이다.
+
+g(x) 가 2L 로 time limited 라고 해보자. 
+그러면 연속함수의 fourier transform은
+F(s) = G(s) * sinc 함수가 된다.
+
+만약 F(s) 가 2B 로 band limited 라고 하면, f(x) 는 delta 함수를 이용해서 주기 함수로 표현이 된다
+총 샘플의 수는 2L(sec) * 2B(sample/sec) = 4LB 가 되게 된다.
+F^(s) = 2B * F() = 
+이를 주파수 domain 에서 계수를 이용해서 풀수 있게 된다.
+f(x) 와 f^(s) 가 2L time limited, 2B band limited 이므로, 주파수 domain 에서의 unique sample number = 4LB 가 되게 된다.
+이를 통해서 discrete fourier transform (DFT) 를 정의하게 된다.
+
+** summary
+1) input 은 finite length 이다.
+2) sampled
+3) finite record output sample
+
+2. 이산 푸리에 변환의 성질
+1) 이산 푸리에 변환은 주기적 성질을 가지며 이때의 주기는 N = 4LB 이다.
+2) F0 은 DC component 로 area 를 나타내게 된다.
+3) fn 이 real value 이라면, 그 fourier 은 periodic hermitian 을 띄게 된다.
+4) 만약 주파수 resolution 이 T 주기로 sampled 가 된다면, 각각의 frequency bin 은 1/NT 가 된다.
+5) 선형성읠 띈다.
+6) shifting 성질을 보인다.
+7) fourier inversion 을 보인다.
+
+3. 이산 푸리에의 Parseval
+
+4. 이산 푸리에 변환의 Convolution
+만약 f,g 의 이산 푸리에 변환이 F,G 라면, 
+FG 의 inverse fourier transform 은 f와 g 의 convolution 이다
+(증명)
