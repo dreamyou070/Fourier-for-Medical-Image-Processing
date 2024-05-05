@@ -1,0 +1,13 @@
+이산 푸리에 분석이다.
+우리는 실제로 digitalized world 이므로 continuous 가 아니라 discrete 한 fourier analysis 를 하게 된다.
+
+1. Discrete Fourier Trnaosfmr (DFT)
+우선 DFT 와 CFT 의 관계를 아는 것으로 시작해 보자.
+만약 g(x) 가 time limited 라고 해보자.
+그러면 g(x) 는 continuous 함수와 rec 함수의 곱으로 표현이 되고, 이는 
+G(s) 가 continuous 와 sinc 함수의 convolution 으로 표현됨을 의미한다.
+2) 
+만약 F(s) 가 band limited 라고 하자.
+f(x) 를 2B 주기로 sampling 을 하게 된다면, f^(x) 는 sampled f(x) 가 되게 되고, 여기서의 sampling 이 된 횟수는 4LB 가 된다.
+f(x) 가 2B 주기로 sampled 이므로,
+F(s) 도 2B 로 sample 이다.
