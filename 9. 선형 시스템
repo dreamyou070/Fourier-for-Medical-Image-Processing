@@ -1,9 +1,24 @@
-1. 선형 시스템
+선형 시스템이란 superposition 와 homogeneity 를 만족하는 시스템이다.
+impulse response 란 inpulse input 에 해당하는 응답을 의미한다.
 
-2. 시불변 시스템
+Time Invariant 란 시스템이 t-타우 에만 의존하는 시스템을 의미한다.
 
-3. 선형 시불변 시스템
+Causality 는 인과 응보와 같은 개념이라 할 수 있다.
+예를 들어서, switching 은 superposition 은 만족시키지만, time invariant 하지 않다.
+왜냐하면, switching system 은 delta 함수와 rec 함수에 영향을 받는데 rec 함수가 causality 를 만족하지 않기 때문이다.
+그래서 switching system 은 time variant 하다.
 
-4. Causality
+또다른 예로,
+1. real part 를 뽑는 시스템은?
+super positionn 을 만족시키지만, homogeneity 를 만족하지 않는다.
+homogeneity 란, scaling 와 같은 것으로 system{a*v(x)} = a*system{v(x)} 를 만족하는지를 보는 것이다.
+real part 를 뽑는 시스템은 homogeneity 를 만족하지 않아서 선형 시스템은 아니다.
 
-5. Cascaded System
+CasCaded system 이란 연속으로 일어나는 시스템이다.
+cascaded system 에서는 모든 응답이 연속으로 일어나게 된다.
+
+또한 선형 시불변 시스템이라면, 
+input 은 동일한 주파수의 복소 표현이 되는데 이때 eigen value 가 곱해진 값으로 결과가 나오게 된다.
+이 값을 T(f0) 이라고 하고, eigen value 라고 한다.
+또한 LTI system 에서는 새로운 frequency 가 생기거나 없어지지 않는다.
+시스템이 안정하다는 것은 BIBO 시스템을 의미하는 것으로, 모든 LTI 싯템은 모든 LTI 시스템은 BIBO 를 만족한다.
