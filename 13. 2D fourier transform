@@ -1,0 +1,33 @@
+이미지는 1D 가 아니라 2D 이므로, 이미지에 적용하는 푸리에 변환을 알기위해서는 2D 푸리에를 이해할 수 있어야 한다.
+
+1. 2D fourier trnasform 의 정의는 어떻게 되는가?
+2D fourier transfor 은 푸리에 변환을 x 와 y 축으로 각각 해주면 된다. 
+
+2. 2D 변환의 이론
+1D 와 마찬가지로 2D 도 선형성을 만족하고, similarity 를 만족한다. (scaling)
+또한 shifting 도 만족해서 time domain 에서 shifting 이 일어나면 frequency domain 에서 linear phase 변환이 일어나게 된다.
+또한 Parseval's theorem 에 의해서, 에너지 보존 법칙이 성립하게 된다.
+2D 에서도 convolution 이 가능한데, 이때는 ** 로 써서 2D 를 표현해준다.
+
+3. 2D 푸리에 역변환
+2D 푸리에 역변환이 가능하기 위해서는 g(x,y) 가 unbounded 이어야 하고, absolute integralable 이어야 한다.
+
+4. separable
+x,y 에 대한 표현을 x 와 y로 각각 분리해서 표현할 수 있다.
+그러므로, g(x,y) = g(x)g(y) 로 표현해서, 1D 변환의 곱으로 표현할 수 있다.
+
+5. Polar domain 에서도 separable 한가?
+g(r,theta) 라고 했을 때 r 와 theta 로 나누어서,g(r,theta)=g(r)g(theta) 로 표혀날 수 있다.
+그리고 여기서 circulary convolutino 의 개념이 도입되게 된다.
+
+6. 헹켈변환이란
+
+7. 2차 선형 시스템이란
+1차 선형 시스템을 확장한 2차 선형 시스템을 생각해 볼 수 있다.
+2차  선형 시스템은 impulse response 로 표현할 수 있다.
+
+8. Restoration
+
+9. reconstruction section themrem (bracewell)
+
+10. central section theorem (cst)
